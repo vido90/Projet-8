@@ -1,0 +1,18 @@
+.grid {
+    background-color: #f6f6f6;
+    min-height: 50vh;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+@media screen and (width <= 768px) {
+    .grid {
+        justify-content: center;
+        background-color: white;
+        padding: 0;
+    }
+}

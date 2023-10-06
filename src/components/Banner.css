@@ -1,0 +1,27 @@
+.banner {
+    position: relative;
+    text-align: center;
+    place-items: center;
+    margin-top: 30px;
+    margin-bottom: 2rem;
+}
+
+  .banner-image {
+    width: 97%;
+    height: 200px;
+    border-radius: 15px;
+    filter: brightness(70%);
+    background-position: center;
+    background-size: cover;
+  }
+
+.banner h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Couleur du texte */
+    max-width: 80%;
+    font-weight: 500;
+   
+  }
