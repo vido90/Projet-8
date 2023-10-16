@@ -1,0 +1,29 @@
+@use "..//scss/variables.scss" as colors;
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 0 2rem;
+    color: colors.$color-primary;
+    font-weight: 500;
+    margin-top: 2rem;
+    @media screen and (width <= 768px) {
+        text-transform: uppercase;
+    }
+    & a {
+        text-decoration: none;
+        color: colors.$color-primary;
+        &.active {
+            text-decoration: underline;
+        }
+        &:hover {
+            text-decoration: underline;
+            color: colors.$color-primary;
+        }
+    }
+}
+
+.navbar__logo {
+    margin-right: auto;
+}

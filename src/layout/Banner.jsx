@@ -1,10 +1,11 @@
 import React from 'react';
-import './Banner.css';
+import './Banner.scss';
+import Plage from '../assets/images/plage.png';
 
 function Banner() {
   return (
     <div className='banner'>
-        <img src='plage.png' alt='banner' className='banner-image'/>
+        <img src={Plage} alt='banner' className='banner-image'/>
         <h1>Chez vous, partout et ailleurs</h1>
     </div>
   )

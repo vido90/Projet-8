@@ -1,0 +1,31 @@
+@use "..//scss/variables.scss" as colors;
+
+.banner {
+    position: relative;
+    text-align: center;
+    place-items: center;
+    margin-top: 30px;
+    margin-bottom: 2rem;
+
+    &-image {
+      width: 97%;
+      height: 250px;
+      border-radius: 15px;
+      filter: brightness(70%);
+      background-position: center;
+      object-fit: cover;
+    }
+
+    
+    h1 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: colors.$color-secondary; /* Couleur du texte */
+      max-width: 80%;
+      font-weight: 500;   
+    }
+}
+
+ 

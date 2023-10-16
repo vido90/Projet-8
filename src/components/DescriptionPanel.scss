@@ -1,0 +1,31 @@
+@use "..//scss/variables.scss" as colors;
+
+.description__panel {
+    margin-bottom: 1rem;
+    p {
+      margin-block: 0;
+    }
+    .description__title {
+      background-color: colors.$color-primary;
+      color: colors.$color-secondary;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i{
+        font-size: 2rem;
+        cursor: pointer;
+
+      }
+    }
+    .description__content {
+      background-color: colors.$grid-background;
+      border-radius: 0 0 15px 15px;
+      color: colors.$color-primary;
+      padding: 1rem;
+
+    }
+   
+    
+  }

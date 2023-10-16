@@ -1,0 +1,16 @@
+@use "../scss/variables.scss" as colors;
+
+.apartment-page {
+  color: colors.$color-primary;
+ 
+  .appartment__description__area {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    @media screen and (width <= 768px) {
+      flex-direction: column;
+  }
+  }
+   
+    
+  }
