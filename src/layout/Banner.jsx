@@ -1,12 +1,12 @@
 import React from 'react';
 import './Banner.scss';
-import Plage from '../assets/images/plage.png';
 
-function Banner() {
+
+function Banner(props) {
   return (
     <div className='banner'>
-        <img src={Plage} alt='banner' className='banner-image'/>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <img src={props.img} alt='banner' className='banner-image'/>
+        {props.title && <h1>{props.title}</h1>}
     </div>
   )
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-import Apartment from '../assets/images/apartment.png';
 import './ImageBanner.scss';
 
-export function ImageBanner() {
+export function ImageBanner(props) {
   return (
     <div className='image__banner'>
-    <img src={Apartment} alt='apartment'/>
+    <img src={props.imageUrl} alt='apartment'/>
 </div>
   )
 }

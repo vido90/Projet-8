@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState }from 'react';
 import './DescriptionPanel.scss';
 
-export function DescriptionPanel() {
+export function DescriptionPanel(props) {
+
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  const showContent = () => {
+    setIsContentVisible(!isContentVisible);
+  }
   return (
     <div className="description__panel">
     <p className='description__title'>
-        <span>Description</span>
-        <i class="fa-solid fa-chevron-up"></i>
+        <span>{props.title}</span>
+        <i className="fa-solid fa-chevron-up" onClick={showContent}></i>
     </p>
-    <p className='description__content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, deleniti? 
-        Expedita deleniti suscipit alias aliquid consequuntur sed eveniet quasi, 
-        laboriosam esse quas laborum saepe in obcaecati ipsam reiciendis magni distinctio? 
-        Cumque consequuntur ab fugiat, quae odio nemo, officia inventore suscipit delectus 
-        temporibus eveniet, corrupti minima cupiditate accusantium illo quam deserunt.
-    </p>
+    {isContentVisible && <p className='description__content'>{props.content}</p>}
     </div>
   )
 }

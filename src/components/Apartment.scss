@@ -1,7 +1,7 @@
 @use "../scss/variables.scss"as colors;
 
 .apartment {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
     background-color: colors.$color-primary;
     border-radius: 15px;
     flex-basis: 30%;
@@ -9,6 +9,15 @@
     align-items: end;
     min-width: 200px;
     min-height: 300px;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
+    }
+
     @media screen and (width <= 768px) {
         .apartment {
             flex-basis: 100%;
@@ -19,6 +28,7 @@
         margin-inline-start: .5rem;
         margin-block-end: .5rem;
         color: colors.$color-secondary;
+        position: absolute;
     }
     & a {
         text-decoration: none;

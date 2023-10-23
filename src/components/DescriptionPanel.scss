@@ -24,8 +24,10 @@
       border-radius: 0 0 15px 15px;
       color: colors.$color-primary;
       padding: 1rem;
+      position: relative;
+      top: -0.3rem;
+      z-index: -1;
 
     }
-   
     
   }
