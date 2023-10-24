@@ -13,7 +13,7 @@ function ApartmentPage() {
     const [selectedFlat, setSelectedFlat] = useState(null);
 
     useEffect(() => {
-        fetch('./data.json')
+        fetch('../data.json')
             .then(response => {
                 return response.json()
                   })
