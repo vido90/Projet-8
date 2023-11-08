@@ -1,39 +1,51 @@
 import React from 'react';
-import Rate from '../assets/images/Rate.png'; 
+import rate from '../assets/images/rate.png'; 
 import './ApartmentHeader.scss';
 
 export function ApartmentHeader(props) {
     console.log("props in apartment header", props)
 
-    const flat = props.flat;
-    const name = flat.host.name;
-    const [firstName, lastName] = name.split("")
+    const { title, location, tags, name, picture, rating} = props;
+    // const flat = props.flat;
+    // const name = flat.host.name;
+    const [firstName, lastName] = name.split(" ")
+
+   
   return (
     <div className='apartment__header'>
             <div className='apartment__title'>
-                <h1>{flat.title}</h1>
-                <h2>{flat.location}</h2>
+                <h1>{title}</h1>
+                <h2>{location}</h2>
+                <div className='apartment__tags'>
+    
+                 {tags.map ((tag) => (
+                    <span key={tag}>{tag}</span>
+                ))} 
+                </div>
             </div> 
-            <div className='apartment__tags'>
-                {props.flat.tags.map ((tag) => (
-                    <span>{tag}</span>
-                    ))}
-            </div>
+           
      
             <div className='apartment__owner'>
+            
                 <div className='apartment__owner__details'>
                     <h3>
                         <span>{firstName}</span>
                         <span>{lastName}</span>
-                    </h3>
+                    </h3> 
                     <div className='apartment__owner__badge'>
-                        <img src={ flat.host.picture } alt="" />
+                        <img src={ picture } alt="" />
                     </div>
                 </div>
                     <div className='apartment__owner__stars'>
-                        <img src={Rate}  alt='etoile'/>
+
+                        {[1, 2, 3, 4, 5].map((num)=> 
+                            <span key={num} className={rating && rating >= num ? "on" : ""}>
+                                <img src={rate} alt={`star-${num}`} />
+                            </span>
+                        )}
+                       
                     </div>
             </div>
-        </div>
+    </div>
   )
 }

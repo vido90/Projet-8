@@ -4,16 +4,41 @@
     display: flex;
     margin-bottom: 2rem;
     gap: 1rem;
+    flex-direction: row;
     @media screen and (width <= 768px) {
         flex-direction: column;
     }
     .apartment__title {
+      color: colors.$color-primary;
       flex-grow: 1;
+      margin-top: 1rem;
     } 
+
+    .apartment__tags {
+      /* display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 100px)); */
+      gap: 1rem;
+      margin-top: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      span {
+        background-color: colors.$color-primary;
+        color: colors.$color-secondary;
+        padding: 0.3rem 2rem;
+        border-radius: 15px;
+        text-align: center;
+      }
+    }
+
+  
+
     .apartment__owner {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-top: 1rem;
         @media screen and (width <= 768px) {
             flex-direction: row;
         }
@@ -27,8 +52,8 @@
     }
     }
     .apartment__owner__badge img {
-      height: 50px;
-      width: 50px;
+      height: 64px;
+      width: 64px;
       border-radius: 50%;
       background-color: colors.$color-tertiary;
     }
@@ -37,10 +62,25 @@
         justify-content: center;
         align-items: center;
         gap: 0.2rem;
+        .on img {
+          filter: grayscale(0);
+        }
+        span {
+          cursor: pointer;
+          font-size: 2rem;
+          color: colors.$color-tertiary;
+
+          &.on {
+              color: colors.$color-primary;
+          }
+      }
+        
     }
-    & > * {
+   
+   
+    /* & > * {
       border: 1px solid colors.$color-primary;
-    }
+    } */
     h1 {
         font-weight: 500;
         font-size: 36px;
@@ -53,19 +93,6 @@
         font-weight: 500;
         line-height: 142.6%;
         margin-top: 0.2rem;
-      }
-    
-      .apartment__tags {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
-        gap: 1rem;
-        span {
-          background-color: colors.$color-primary;
-          color: colors.$color-secondary;
-          padding: 0.3rem 1rem;
-          border-radius: 15px;
-          text-align: center;
-        }
       }
 
       h3 {

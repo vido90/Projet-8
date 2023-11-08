@@ -1,8 +1,9 @@
 import React from 'react'
 import "./Apartment.scss"
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Apartment(props) {
+  
     return (
       <Link
         to={`/flat/${props.id}`} 

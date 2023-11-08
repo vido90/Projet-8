@@ -7,18 +7,29 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 1rem;
-    justify-content: space-between;
+    padding: 2rem;
+    margin: 0 5rem 2rem;
     & > * {
-        width: 100%;
-        max-width: 20rem;
+        /* width: 100%;
+        max-width: 20rem; */
+        width: calc(33.33% - 1rem); /* Calcul de la largeur pour trois colonnes avec un espace de 1rem entre elles */
+        max-width: calc(33.33% - 1rem);
     }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
     .grid {
         justify-content: center;
         background-color: colors.$grid-background-responsive;
         padding: 0;
+        background-color: colors.$color-secondary;
+        & > * {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    img {
+        max-width: 100%; /* Ajout de cette règle pour les images */
+        height: auto; /* Permet à l'image de conserver son ratio hauteur/largeur */
     }
 }

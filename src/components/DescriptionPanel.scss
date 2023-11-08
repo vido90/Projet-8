@@ -2,6 +2,10 @@
 
 .description__panel {
     margin-bottom: 1rem;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+   
     p {
       margin-block: 0;
     }
