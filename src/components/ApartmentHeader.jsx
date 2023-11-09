@@ -1,6 +1,6 @@
 import React from 'react';
-import rate from '../assets/images/rate.png'; 
 import './ApartmentHeader.scss';
+import StarsRating from '../components/StarsRating';
 
 export function ApartmentHeader(props) {
     console.log("props in apartment header", props)
@@ -37,12 +37,12 @@ export function ApartmentHeader(props) {
                     </div>
                 </div>
                     <div className='apartment__owner__stars'>
-
-                        {[1, 2, 3, 4, 5].map((num)=> 
+                        <StarsRating rating={rating} />
+                        {/* {[1, 2, 3, 4, 5].map((num)=> 
                             <span key={num} className={rating && rating >= num ? "on" : ""}>
                                 <img src={rate} alt={`star-${num}`} />
                             </span>
-                        )}
+                        )} */}
                        
                     </div>
             </div>

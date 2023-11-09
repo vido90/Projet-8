@@ -62,18 +62,6 @@
         justify-content: center;
         align-items: center;
         gap: 0.2rem;
-        .on img {
-          filter: grayscale(0);
-        }
-        span {
-          cursor: pointer;
-          font-size: 2rem;
-          color: colors.$color-tertiary;
-
-          &.on {
-              color: colors.$color-primary;
-          }
-      }
         
     }
    
