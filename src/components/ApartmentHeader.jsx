@@ -6,8 +6,6 @@ export function ApartmentHeader(props) {
     console.log("props in apartment header", props)
 
     const { title, location, tags, name, picture, rating} = props;
-    // const flat = props.flat;
-    // const name = flat.host.name;
     const [firstName, lastName] = name.split(" ")
 
    
@@ -38,11 +36,6 @@ export function ApartmentHeader(props) {
                 </div>
                     <div className='apartment__owner__stars'>
                         <StarsRating rating={rating} />
-                        {/* {[1, 2, 3, 4, 5].map((num)=> 
-                            <span key={num} className={rating && rating >= num ? "on" : ""}>
-                                <img src={rate} alt={`star-${num}`} />
-                            </span>
-                        )} */}
                        
                     </div>
             </div>

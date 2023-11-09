@@ -1,6 +1,26 @@
 @use "..//scss/variables.scss" as colors;
 
+.stars-rating {
+    display: flex;
+  
+    .star {
+      width: 30px; /* Ajustez la taille selon vos besoins */
+      height: 30px; /* Ajustez la taille selon vos besoins */
+      margin: 0;
+      padding: 0;
+    }
+  
+    .grey {
+      filter: grayscale(100%);
+    }
 
-.stars-rating img.active {
-    color: colors.$color-primary;
-}
+    .star.active {
+        filter: none; /* Réinitialise le filtre pour les étoiles actives */
+        fill: #ff5656; /* Couleur rouge pour les étoiles actives */
+      }
+  }  
+  
+  
+  
+  
+  

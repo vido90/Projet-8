@@ -22,12 +22,12 @@
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: colors.$color-secondary; /* Couleur du texte */
+      color: colors.$color-secondary; 
       max-width: 80%;
-      font-weight: 500;   
+      font-weight: 500;    
       @media screen and (max-width:768px) {
-        position: absolute;
-        left: 50%;
+        padding-left: 1rem;
+        width: 65%!important;
       }
     }
 }
