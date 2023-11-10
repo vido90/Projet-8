@@ -3,6 +3,9 @@
 .apartment-page {
   color: colors.$color-primary;
   margin: 0 5rem;
+  @media screen and (width <= 768px) {
+  margin: 2rem 1rem;
+  }
  
   .apartment_description__area {
     display: flex;

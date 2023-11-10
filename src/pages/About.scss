@@ -2,4 +2,7 @@
 
 .about__container {
     margin: 0 5rem;
+    @media  screen and (width <= 768px) {
+        margin: 1rem 1rem;
+      }
 }

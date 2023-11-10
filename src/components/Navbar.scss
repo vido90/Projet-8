@@ -9,13 +9,20 @@
     font-size: 24px;
     margin: 2rem 5rem;
     @media screen and (width <= 768px) {
+        display: flex;
         text-transform: uppercase;
         font-size: 12px;
+        gap: 1rem;
+        margin: 1rem 1rem;
+        align-items: center;
     }
     & a {
         text-decoration: none;
         color: colors.$color-primary;
-        font-size: 12px;
+        font-size: 24px;
+        @media screen and (width <= 768px) {
+            font-size: 12px;
+        }
         &.active {
             text-decoration: underline;
         }
@@ -28,7 +35,10 @@
 
 .navbar__logo {
     margin-right: auto;
+    width: 210px;
+    height: 68px;
     @media screen and (width <= 768px) {
-        font-size: 90px;
+        width: 145px;
+        height: 46px;
     }
 }

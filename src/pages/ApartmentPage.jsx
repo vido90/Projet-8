@@ -42,6 +42,7 @@ function ApartmentPage() {
                         tags={selectedFlat.tags} 
                         name={selectedFlat.host.name}
                         picture={selectedFlat.host.picture}
+                        rating={selectedFlat.rating}
                     />
                     <div className='apartment_description__area'>
                         <div className='area_col'>
