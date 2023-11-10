@@ -1,12 +1,12 @@
 import React from 'react';
-import './ApartmentGrid.scss';
+import './ApartmentCard.scss';
 import Apartment from './Apartment';
 import { useEffect, useState} from 'react'; 
 
 
 
 
-function ApartmentGrid() {
+function ApartmentCard() {
   const [apartment, setApartment] = useState([])
 
   useEffect(() => {  
@@ -25,7 +25,7 @@ function ApartmentGrid() {
   return (
     <div className='grid'> 
       {apartment.map((apartment) => 
-        <Apartment key={apartment.title} imgurl={apartment.cover} id={apartment.id}/>
+        <Apartment key={apartment.title} imgurl={apartment.cover} id={apartment.id} title={apartment.title}/>
         )}
       
     
@@ -34,4 +34,4 @@ function ApartmentGrid() {
   )
 }
 
-export default ApartmentGrid
+export default ApartmentCard

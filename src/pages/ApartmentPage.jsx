@@ -4,7 +4,6 @@ import Footer from '../layout/Footer';
 import './ApartmentPage.scss';
 import { ImageCaroussel } from '../components/ImageCaroussel';
 import { useParams } from 'react-router-dom'; // Utilisation de useParams
-// import { DescriptionPanel } from '../components/DescriptionPanel';
 import { ApartmentHeader } from '../components/ApartmentHeader';
 import { DescriptionPanel } from '../components/DescriptionPanel';
 

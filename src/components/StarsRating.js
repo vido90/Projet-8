@@ -19,21 +19,3 @@ const StarsRating = (props) => {
 }
 
 export default StarsRating;
-
-
-/* const StarsRating = (props) => {
-    const rating = props.rating;
-    const range = [1, 2, 3, 4, 5];
-
-    return (
-        <div className='stars-rating'>
-            {range.map((num) =>
-                rating >= num ? 
-                    <img key={num} className='star' src={starActive} alt={`star-${num}`} /> 
-                    : <img key={num} className='star grey' src={starInactive} alt={`star-${num}`} />
-            )}
-        </div>
-    )
-}
-
-export default StarsRating; */

@@ -13,10 +13,6 @@
         width: calc(33.33% - 1rem); /* Calcul de la largeur pour trois colonnes avec un espace de 1rem entre elles */
         max-width: calc(33.33% - 1rem);
     }
-    
-   /*  @media  screen and (width <= 768px) {
-        margin: 1rem 1rem;
-    } */
 }
 
 @media screen and (max-width: 768px) {

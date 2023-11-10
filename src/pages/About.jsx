@@ -4,7 +4,7 @@ import Footer from '../layout/Footer'; //Importation du footer//
 import Banner from '../layout/Banner';
 import './About.scss';
 import Montagne from '../assets/images/Montagne.jpg';
-import { DescriptionPanel } from '../components/DescriptionPanel';
+import { DescriptionPanel } from '../components/DescriptionPanel'; /* importation du composant descriptionPanel */
 
 
 function About() {
