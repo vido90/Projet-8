@@ -20,6 +20,9 @@
       i{
         font-size: 2rem;
         cursor: pointer;
+        transition: transform 0.5s ease; // Ajout de l'animation de transition
+        transform-origin: center center;
+        transform: rotate(0deg);
 
       }
     }
@@ -31,7 +34,31 @@
       position: relative;
       top: -0.3rem;
       z-index: -1;
+      opacity: 1; // Utilise l'opacité pour masquer le texte pendant l'animation
+      max-height: 3;
+      overflow: hidden;
+      transition: max-height 0.5s ease; // Ajout une transition sur la propriété max-height
 
+      &.hidden {
+        opacity: 1; // Rend le texte invisible lorsqu'il est caché
+        max-height: 3; // Masque le contenu lorsqu'il est caché
+
+      }
+
+      &.visible {
+        max-height: 1000px; // Définit  une valeur suffisamment grande pour permettre au contenu de se développer complètement
+      }
     }
-    
+
+    @keyframes slide-in {
+      from {
+        transform: translateY(-100%);
+      }
+    }
+
+    @keyframes slide-out {
+      to {
+        transform: translateY(-100%);
+      }
+    }
   }

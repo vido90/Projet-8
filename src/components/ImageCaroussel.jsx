@@ -6,10 +6,10 @@ export function ImageCaroussel(props) {
 
   const [currentPicture, setCurrentPicture] = useState(0);
 
-  const getClassName = (i) => {
+  /* const getClassName = (i) => {
     if (i === currentPicture) return "show";
     return "";
-  };
+  }; */
 
   const moveTonext = () => {
     setCurrentPicture((currentPicture + 1) % pictures.length);
@@ -28,12 +28,14 @@ export function ImageCaroussel(props) {
     <div className='image__caroussel'>
       <div className='image__container'>
         
-        {/* <img src={props.imgUrl} alt='apartment'/> */}
         {pictures.map((pic,i) => (
-        <img key={pic} src={pic} alt="" className={ getClassName(i) }></img>
+        <img key={pic} src={pic} alt="" className={currentPicture === i ? 'show' : '' }></img>
     ))}
       </div>
-      <button className="btn btn-previous" onClick={moveToprevious}>
+
+      {pictures.length > 1 && ( // Affiche le bouton seulement s'il y a plus d'une image
+        <>
+             <button className="btn btn-previous" onClick={moveToprevious}>
         <i className="fas fa-chevron-left"></i>
       </button>
       <span className="slide-counter">
@@ -42,6 +44,8 @@ export function ImageCaroussel(props) {
       <button className="btn btn-next" onClick={moveTonext}>
         <i className="fas fa-chevron-right"></i>
       </button>
+        </>
+      )}
       
       
 </div>

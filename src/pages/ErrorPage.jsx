@@ -1,12 +1,18 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, /* useLocation */ } from "react-router-dom";
 import './ErrorPage.scss';
 import Navbar from '../components/Navbar'; //Importation du navbar//
+import Footer from '../layout/Footer';
 
 function ErrorPage() {
+  /* const location = useLocation(); */
+ /*  const isApartmentPage = location.pathname.includes('/flat/');
+  const isExactPath = location.pathname === '/'; */
   return (
     <>
-    <Navbar />
+  {/*   {isApartmentPage && isExactPath && <Navbar />} */}
+  
+  <Navbar />
     <main>
         <div className='error-page'>
             <h1>404</h1>
@@ -14,6 +20,7 @@ function ErrorPage() {
             <Link to="/">Retourner sur la page d'accueil</Link>
         </div>
     </main>
+    <Footer />
     </>
   )
 }

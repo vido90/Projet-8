@@ -3,6 +3,7 @@
 .apartment-page {
   color: colors.$color-primary;
   margin: 0 5rem;
+  overflow: hidden;
   @media screen and (width <= 768px) {
   margin: 2rem 1rem;
   }

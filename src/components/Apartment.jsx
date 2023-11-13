@@ -3,8 +3,6 @@ import "./Apartment.scss"
 import { Link } from 'react-router-dom';
 
 function Apartment(props) {
- /*  const title = "Appartement factice"; */
-  /* console.log("Title:", props.title); */
     return (
       <Link
         to={`/flat/${props.id}`} 
