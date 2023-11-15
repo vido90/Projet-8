@@ -4,7 +4,8 @@ import Logo from '../assets/images/LOGO blanc.png';
 
 function Footer() {
   return (
-    <div className='footer'>
+    <footer>
+      <div className='footer'>
         <div className='footer__logo'>
             <img src={Logo} alt='logo'/>
         </div>
@@ -12,8 +13,10 @@ function Footer() {
             © 2020 Kasa. All rights reserved
         </div>
         
-    </div>
+      </div>
+    </footer>
   )
 }
 
 export default Footer
+

@@ -10,35 +10,37 @@ export function ApartmentHeader(props) {
 
    
   return (
-    <div className='apartment__header'>
-            <div className='apartment__title'>
-                <h1>{title}</h1>
-                <h2>{location}</h2>
+    
+        <main>
+            <div className='apartment__header'>
+                <div className='apartment__title'>
+                    <h1>{title}</h1>
+                    <h2>{location}</h2>
                 <div className='apartment__tags'>
     
                  {tags.map ((tag) => (
                     <span key={tag}>{tag}</span>
                 ))} 
                 </div>
-            </div> 
-           
-     
-            <div className='apartment__owner'>
-            
-                <div className='apartment__owner__details'>
-                    <h3>
-                        <span>{firstName}</span>
-                        <span>{lastName}</span>
-                    </h3> 
-                    <div className='apartment__owner__badge'>
-                        <img src={ picture } alt="" />
+                </div> 
+                <div className='apartment__owner'>
+                    <div className='apartment__owner__details'>
+                        <h3>
+                            <span>{firstName}</span>
+                            <span>{lastName}</span>
+                        </h3> 
+                        <div className='apartment__owner__badge'>
+                            <img src={ picture } alt="" />
+                        </div>
                     </div>
+                        <div className='apartment__owner__stars'>
+                            <StarsRating rating={rating} />
+                        </div>
                 </div>
-                    <div className='apartment__owner__stars'>
-                        <StarsRating rating={rating} />
-                       
-                    </div>
             </div>
-    </div>
+        </main>
+            
+           
+
   )
 }

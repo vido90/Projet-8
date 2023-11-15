@@ -16,8 +16,10 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <Banner img={Plage} title='Chez vous, partout et ailleurs'/>
-      <ApartmentCard />
+      <main>
+        <Banner img={Plage} title='Chez vous, partout et ailleurs'/>
+        <ApartmentCard />
+      </main>
       <Footer />
     </>
   );

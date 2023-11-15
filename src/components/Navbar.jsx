@@ -5,7 +5,8 @@ import Logo from '../assets/images/LOGO.png';
 
 function Navbar() {
   return (
-    <nav className='navbar'>
+    <header>
+      <nav className='navbar'>
         <div className='navbar__logo'>
             <img src={Logo} alt='Logo' />
         </div>
@@ -16,9 +17,9 @@ function Navbar() {
         <NavLink to="/about">
             <div>A propos</div>
         </NavLink>
-        
-    </nav>
+      </nav>
+      </header>
   )
 }
 
-export default Navbar
+export default Navbar;

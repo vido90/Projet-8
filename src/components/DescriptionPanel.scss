@@ -1,10 +1,12 @@
 @use "..//scss/variables.scss" as colors;
 
+
 .description__panel {
     margin-bottom: 1rem;
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
+    /*animation-delay: 250ms;*/
    
     p {
       margin-block: 0;
@@ -20,9 +22,10 @@
       i{
         font-size: 2rem;
         cursor: pointer;
-        transition: transform 0.5s ease; // Ajout de l'animation de transition
+        /* transition: transform 0.5s ease; // Ajout de l'animation de transition */
         transform-origin: center center;
         transform: rotate(0deg);
+        /*animation: 3s ease-in 1s infinite reverse both running slidein;*/
 
       }
     }
@@ -37,28 +40,57 @@
       opacity: 1; // Utilise l'opacité pour masquer le texte pendant l'animation
       max-height: 3;
       overflow: hidden;
-      transition: max-height 0.5s ease; // Ajout une transition sur la propriété max-height
+      transition: max-height 0.3s ease-in-out;
+      animation: slideIn 1s ease-in-out;
 
-      &.hidden {
-        opacity: 1; // Rend le texte invisible lorsqu'il est caché
-        max-height: 3; // Masque le contenu lorsqu'il est caché
-
+      &.open {
+        animation-name: slideIn; /* Animation pour l'ouverture */
       }
-
-      &.visible {
-        max-height: 1000px; // Définit  une valeur suffisamment grande pour permettre au contenu de se développer complètement
+  
+      &.closed {
+        animation-name: slideOut; /* Animation pour la fermeture */
       }
-    }
+    
 
-    @keyframes slide-in {
-      from {
-        transform: translateY(-100%);
-      }
-    }
-
-    @keyframes slide-out {
-      to {
-        transform: translateY(-100%);
-      }
+    &.open .description__content {
+      max-height: 500px; 
+    transition: max-height 0.5s ease-in-out;
     }
   }
+
+
+    
+    .up {
+      transform: rotate(180deg); /* Fait tourner la flèche vers le haut */
+    }
+    
+    .down {
+      transform: rotate(0deg); /* Fait tourner la flèche vers le bas */
+    }
+  }
+
+  
+
+  @keyframes slideIn {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px; /* À adapter selon la hauteur du contenu */
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      max-height: 500px; /* À adapter selon la hauteur du contenu */
+      opacity: 1;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+
+   

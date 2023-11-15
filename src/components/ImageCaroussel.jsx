@@ -6,11 +6,6 @@ export function ImageCaroussel(props) {
 
   const [currentPicture, setCurrentPicture] = useState(0);
 
-  /* const getClassName = (i) => {
-    if (i === currentPicture) return "show";
-    return "";
-  }; */
-
   const moveTonext = () => {
     setCurrentPicture((currentPicture + 1) % pictures.length);
   }

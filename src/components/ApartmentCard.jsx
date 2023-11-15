@@ -23,14 +23,14 @@ function ApartmentCard() {
 
 
   return (
-    <div className='grid'> 
+    <main>
+      <div className='grid'> 
       {apartment.map((apartment) => 
         <Apartment key={apartment.title} imgurl={apartment.cover} id={apartment.id} title={apartment.title}/>
         )}
-      
+      </div>
+    </main>
     
-
-    </div>
   )
 }
 
